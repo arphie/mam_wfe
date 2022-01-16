@@ -23,21 +23,42 @@
 							</div>
 						</div>
 					</div>
-					<div class="student_menu">
-						<ul>
-							<li><button>PECS Board</button></li>
-							<li><button>Timeline</button></li>
-						</ul>
+					<div class="side-timeline">
+						<div class="pc-inner">
+							<v-timeline align-top dense class="dtimeline">
+								<v-timeline-item>
+									<div class="dactivityinner">
+										<h3>Sent request for connection with Teacher</h3>
+										<div class="ddate">Jan 01, 2021 12:34pm</div>
+										<div class="dmessage">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
+										</div>
+									</div>
+								</v-timeline-item>
+								<v-timeline-item>
+									<div class="dactivityinner">
+										<h3>Successfully connected with teacher</h3>
+										<div class="ddate">Jan 08, 2021 12:34pm</div>
+										<div class="dmessage">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
+										</div>
+									</div>
+								</v-timeline-item>
+								<v-timeline-item>
+									<div class="dactivityinner">
+										<h3>Teacher setup PECS Board</h3>
+										<div class="ddate">Jan 09, 2021 12:34pm</div>
+										<div class="dmessage">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
+										</div>
+									</div>
+								</v-timeline-item>
+							</v-timeline>
+						</div>
 					</div>
 				</div>
 				<div class="dm-right">
 					<div class="dm-right-inner">
-						<div class="profheader">
-							<ul>
-								<li><button>PECS Board</button></li>
-								<li><button>Timeline</button></li>
-							</ul>
-						</div>
 						<div class="profcontent">
 							<div class="profcontent-inner">
 								<!-- pecs board manipulation -->
@@ -46,46 +67,13 @@
 										<PecsCustom />
 									</div>
 								</div>
-								<div class="pc-item">
-									<div class="pc-inner">
-										<v-timeline align-top dense class="dtimeline">
-											<v-timeline-item>
-												<div class="dactivityinner">
-													<h3>Sent request for connection with Teacher</h3>
-													<div class="ddate">Jan 01, 2021 12:34pm</div>
-													<div class="dmessage">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
-													</div>
-												</div>
-											</v-timeline-item>
-											<v-timeline-item>
-												<div class="dactivityinner">
-													<h3>Successfully connected with teacher</h3>
-													<div class="ddate">Jan 08, 2021 12:34pm</div>
-													<div class="dmessage">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
-													</div>
-												</div>
-											</v-timeline-item>
-											<v-timeline-item>
-												<div class="dactivityinner">
-													<h3>Teacher setup PECS Board</h3>
-													<div class="ddate">Jan 09, 2021 12:34pm</div>
-													<div class="dmessage">
-														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut sollicitudin orci. Nam eget risus eget lorem lobortis maximus vel sit amet lacus.
-													</div>
-												</div>
-											</v-timeline-item>
-										</v-timeline>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<br class="clear">
 			</div>
-			
+
 		</div>
 	</div>
 </template>
@@ -109,19 +97,17 @@
 		width: 70%;
 	}
 	.dprofilecard {
-		background: #fff;
-		box-shadow: 0 2px 10px 0 rgb(94 86 105 / 10%);
 		padding: 25px 30px;
 		border-radius: 5px;
 		margin: 0 10px 15px;
-		border: 3px solid #fff;
 		transition: .5s ease-out;
 	}
 	.dprofileimage {
 		text-align: center;
 	}
 	.dprofileimage img {
-		border-radius: 5px;
+		border-radius: 150px;
+		border: 5px solid #ff9392;
 	}
 	.dheaddetails {
 		line-height: 1em;
@@ -198,6 +184,9 @@
 		line-height: 1em;
 		padding: 10px 30px;
 		border-radius: 50px;
+	}
+	.side-timeline {
+	    width: 95%;
 	}
 </style>
 

@@ -91,7 +91,7 @@
 						id: 'SYS1034fsdf'
 					},
 					{
-						id: '12345',	
+						id: '12345',
 						name: 'Some Teacher',
 						position: 'SPED Teacher 1',
 						contact: '09234352341',
@@ -128,7 +128,7 @@
 	.top-right {
 		float: left;
 		width: 50%;
-	} 
+	}
 	.dtl-item {
 		float: left;
 		width: 20%;
