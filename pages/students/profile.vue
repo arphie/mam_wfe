@@ -10,15 +10,12 @@
 									<img src="~/assets/images/teacher_diff.png" />
 								</div>
 								<div class="dstudentname">John Peter Doe</div>
+								<div class="dstudent">Sample elementary school</div>
 								<div class="dheaddetails">
-									Details
-								</div>
-								<div class="student_details">
-									<div class="sd_details">
-										<div class="saddress">Some address</div>
-										<div class="scontact">+6390123445678</div>
-										<div class="semail">sample@students.com</div>
-									</div>
+									<ul>
+										<li><button v-on:click="changeMainContent('user')">Personal Details</button></li>
+										<li><button v-on:click="changeMainContent('pecs')">Personal Pecs</button></li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -63,8 +60,11 @@
 							<div class="profcontent-inner">
 								<!-- pecs board manipulation -->
 								<div class="pc-item">
-									<div class="pc-inner">
+									<div class="pc-inner" v-if="showUserDetails == 'pecs'">
 										<PecsCustom />
+									</div>
+									<div class="pc-inner" v-if="showUserDetails == 'user'">
+										<UserProfileInfo />
 									</div>
 								</div>
 							</div>
@@ -81,6 +81,16 @@
 	export default {
 		name: 'Profile',
 		layout: 'Dashboard',
+		data() {
+			return {
+				showUserDetails: 'user',
+			}
+		},
+		methods: {
+			changeMainContent(item){
+				this.showUserDetails = item;
+			}
+		}
 	}
 </script>
 
@@ -111,10 +121,31 @@
 	}
 	.dheaddetails {
 		line-height: 1em;
-		border-bottom: 1px solid rgba(94,86,105,.14);
+		/* border-bottom: 1px solid rgba(94,86,105,.14); */
 		margin-top: 20px;
 		padding-bottom: 5px;
 		font-weight: bold;
+	}
+	.dheaddetails ul {
+		padding: 0;
+	}
+	.dheaddetails ul li {
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	.dheaddetails ul li button {
+		background: linear-gradient(137deg, #ff8f8f 0%, #eb4949 100%);
+		display: block;
+		width: 100%;
+		text-align: left;
+		line-height: 1em;
+		padding: 10px 15px;
+		text-decoration: none;
+		font-size: 13px;
+		font-weight: 400;
+		color: #fff;
+		border-radius: 5px;
+		border: 1px solid #eb4949;
 	}
 	.dstudentname {
 		text-align: center;
